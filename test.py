@@ -1,3 +1,3 @@
 # -*- encoding=utf8 -*-
 
-ptint('hello')
+print('hello')
