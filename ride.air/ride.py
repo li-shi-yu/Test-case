@@ -208,5 +208,4 @@ def run(arr, scooterNo):
         connect_device("android:///" + dev)
         ride(arr, scooterNo)
                    
-
 run(arr,scooterNo)

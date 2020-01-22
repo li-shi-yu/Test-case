@@ -6,6 +6,6 @@ import os
 testcasename = os.getenv("testcasename")
 devices = os.getenv("device")
 scooterNo = os.getenv("scooterNo")
-print(scooterNo)
+print(testcasename)
 print(devices)
 print(scooterNo)
