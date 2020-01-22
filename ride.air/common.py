@@ -1,6 +1,7 @@
 # -*- encoding=utf8 -*-
 __author__ = "shiyu.li"
 
+import os
 from airtest.core.api import *
 from airtest.core.android.adb import *
 from airtest.core.android.android import *
@@ -13,7 +14,7 @@ android = Android()
 
 def get_deviceList():
 
-    deviceList = adb.devices()
+    deviceList = os.getenv("device")
     # print(device_list)
     return deviceList
 

@@ -3,7 +3,7 @@ __author__ = "shiyu.li"
 
 from common import *
 
-scooterNo="S9111117"
+scooterNo = os.getenv("scooterNo")
 
 arr = [
     {
@@ -181,8 +181,8 @@ arr = [
     }
 ]
 
-def run(arr,scooterNo):
-        
+def ride(arr, scooterNo):
+    
     for i in arr:
         if i["type"] is "click":
             for img in i["assert"]:
@@ -198,6 +198,15 @@ def run(arr,scooterNo):
             assert_exists(i["assert"]["img"])
             set_text(i["sendText"]["value"], i["sendText"]["text"])
         elif i["type"] is "sleep":
-            sleep(i["time"])                
+            sleep(i["time"]) 
+
+def run(arr, scooterNo):
+    
+    deviceList = get_deviceList()
+    for i in deviceList:
+        dev = i[0]
+        connect_device("android:///" + dev)
+        ride(arr, scooterNo)
+                   
 
 run(arr,scooterNo)
