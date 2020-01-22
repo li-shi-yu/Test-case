@@ -15,7 +15,7 @@ android = Android()
 def get_deviceList():
 
     deviceList = os.getenv("device")
-    # print(device_list)
+    print(device_list)
     return deviceList
 
 def check_app(package):
