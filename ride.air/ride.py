@@ -1,6 +1,8 @@
 # -*- encoding=utf8 -*-
 __author__ = "shiyu.li"
 
+import sys
+sys.os.path('/Users/shiyu.li/.jenkins/workspace/test/ride.air/ride.py)
 from common import *
 
 scooterNo = os.getenv("scooterNo")
