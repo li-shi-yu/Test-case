@@ -14,8 +14,15 @@ android = Android()
 
 def get_deviceList():
 
-    deviceList = os.getenv("device")
-    print(deviceList)
+    deviceList = []
+    adb_deviceList = adb.devices()
+    env_deviceList = os.getenv("device")
+    for i in env_deviceList:
+        if i in adb_deviceList:
+            deviceList.append(i)
+        else:
+            continue
+    # print(deviceList)        
     return deviceList
 
 def check_app(package):
