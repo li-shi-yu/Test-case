@@ -206,6 +206,7 @@ def run(arr, scooterNo):
     for i in deviceList:
         dev = i[0]
         connect_device("android:///" + dev)
+        print('current device is %s'%dev)
         ride(arr, scooterNo)
                    
 run(arr,scooterNo)
