@@ -19,6 +19,7 @@ def get_deviceList():
     env_deviceList = os.getenv("device")
     for i in env_deviceList:
         if i in adb_deviceList:
+            print(i)
             deviceList.append(i)
         else:
             continue
