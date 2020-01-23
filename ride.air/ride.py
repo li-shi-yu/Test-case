@@ -2,7 +2,7 @@
 __author__ = "shiyu.li"
 
 import sys
-sys.os.path('/Users/shiyu.li/.jenkins/workspace/test/ride.air/ride.py)
+sys.path.append('/Users/shiyu.li/.jenkins/workspace/test/ride.air/ride.py)
 from common import *
 
 scooterNo = os.getenv("scooterNo")
